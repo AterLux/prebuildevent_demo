@@ -26,10 +26,10 @@ Rename php.ini-development into php.ini, open it, find [Date] section uncomment 
 For example: *Europe/Moscow*. 
 
 In the Atmel Studio project, click "Properties", and choose Build Events tab. 
-In the field "Pre-build event command line" you can specify calls to the php-scripts using format: "php -f php_scrip.php arguments ..."
+In the field "Pre-build event command line" you can specify calls to the php-scripts using format: "php -f php_script.php arguments ..."
 
 
-## [convert_images.php](https://github.com/AterLux/prebuildevent_demo/blob/master/scripts/convert_images.php)
+## [update_version.php](https://github.com/AterLux/prebuildevent_demo/blob/master/scripts/update_version.php)
 
 This script is used to update build version and information about build time each time the project up to build.
 
@@ -51,7 +51,7 @@ Then, if this date is greater than the date of specified .h-file, then .h-file i
     php -f "$(SolutionDir)scripts\update_version.php" "$(MSBuildProjectDirectory)\build_version.h" "$(MSBuildProjectDirectory)" "$(MSBuildProjectDirectory)\display" "$(MSBuildProjectDirectory)\generated"
 
 
-## [update_version.php](https://github.com/AterLux/prebuildevent_demo/blob/master/scripts/update_version.php)
+## [convert_images.php](https://github.com/AterLux/prebuildevent_demo/blob/master/scripts/convert_images.php)
 
 This scans a specified directory for 24-bit RGB uncompressed *.bmp of size 128x64 and converts it into black&white image data, compatible with a monochrome display, connected to the MCU.
 Resulting image data is represented as arrays in the generated source file.
